@@ -1,6 +1,7 @@
 package com.bridgelabz.addressbookstream;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -35,6 +36,8 @@ public class AddressBook {
 			case 3:
 				delete();
 				break;
+			case 4:
+				sortCity();
 			default:
 				status = false;
 			}
@@ -142,6 +145,10 @@ public class AddressBook {
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
+	}
+	public void sortCity() {
+		Collections.sort(list, Sort.compareCity);
+
 	}
 
 	@Override
