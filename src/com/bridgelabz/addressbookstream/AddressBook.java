@@ -38,6 +38,10 @@ public class AddressBook {
 				break;
 			case 4:
 				sortCity();
+			case 5:
+				sortState();
+			case 6:
+				print();
 			default:
 				status = false;
 			}
@@ -149,6 +153,10 @@ public class AddressBook {
 	public void sortCity() {
 		Collections.sort(list, Sort.compareCity);
 
+	}
+
+	public void sortState() {
+		Collections.sort(list, Sort.compareState);
 	}
 
 	@Override
