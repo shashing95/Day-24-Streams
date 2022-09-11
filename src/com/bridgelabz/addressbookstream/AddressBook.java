@@ -42,6 +42,11 @@ public class AddressBook {
 				sortState();
 			case 6:
 				print();
+			case 7:
+				countList();
+			case 8:
+				sortByFirstName();
+				
 			default:
 				status = false;
 			}
@@ -154,6 +159,10 @@ public class AddressBook {
 	public void countList() {
 		Long total = list.stream().count();
 		System.out.println(total); 
+	} 
+	
+	public void sortByFirstName() {
+		Collections.sort(list, Sort.compareFirstName);
 	}
 		
 	public void sortCity() {
